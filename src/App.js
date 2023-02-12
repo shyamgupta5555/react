@@ -1,25 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
 
+import Shyam from './componets/AA';
+
 function App() {
+  let obj={
+    title:"tutorial java",
+    time:"1 year ago",
+    channel:"alpha tutorial"
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1 style={{ backgroundColor: 'red' }}>hii browser</h1>
+      <div>
+      <Shyam {...obj}></Shyam>
+        <Shyam
+          title="this is page react"
+          time="1 year ago"
+          channel="shyam gupta"
+        ></Shyam>
+
+        <Shyam
+          title="this is page html"
+          time="1 year ago"
+          views="1 millon"
+          channel="shyam gupta"
+        ></Shyam>
+        
+        <Shyam
+        title="this is page css"
+        time="1 year ago"
+        views="10k"
+        channel="shyam gupta"
+      ></Shyam>
+
+
+
+      </div>
+
     </div>
   );
 }
 
+
+
+
+
 export default App;
+
+
