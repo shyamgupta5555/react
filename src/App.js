@@ -1,48 +1,41 @@
 import './App.css';
 
-import Shyam from './componets/AA';
+import Language from './component/LanguageNote';
+import LuckyButton from './component/LuckyButton';
+import Logo from './component/Logo';
+import SearchButton from './component/SearchButton';
+import WordBox from './component/WordBox';
+
 
 function App() {
-  let obj={
-    title:"tutorial java",
-    time:"1 year ago",
-    channel:"alpha tutorial"
-
-  }
   return (
-    <div className='App'>
-      <h1 style={{ backgroundColor: 'red' }}>hii browser</h1>
-      <div>
-      <Shyam {...obj}></Shyam>
-        <Shyam
-          title="this is page react"
-          time="1 year ago"
-          channel="shyam gupta"
-        ></Shyam>
-
-        <Shyam
-          title="this is page html"
-          time="1 year ago"
-          views="1 millon"
-          channel="shyam gupta"
-        ></Shyam>
-        
-        <Shyam
-        title="this is page css"
-        time="1 year ago"
-        views="10k"
-        channel="shyam gupta"
-      ></Shyam>
-
-
-
+    <div className='App'  >
+     <div style={{ display: 'flex', justifyContent: 'center' }}>
+     <Logo/>
+     </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <WordBox />
       </div>
-
+  
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '5px',
+          marginTop: '5px',
+        }}
+      >
+        <SearchButton />
+        <LuckyButton />
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <Language/>
+      </div>
+      
+      
     </div>
-  );
+  )
 }
-
-
 
 
 
