@@ -5,17 +5,21 @@ import  { useState } from 'react';
 
 function UpperCase() {
   let [data, setData] =useState(null)
-  function getData(val){
-    console.warn(val.target.value)
-    setData(val.target.value)
+  let [print, setPrint] =useState(null)
 
+  function getData(val){
+    setData(val.target.value)
+    setPrint(false)
   }
  
   return (
-   <div >
-    <h1> convert to UpperCase !</h1>
-    <p></p>
-    <input className='input' type="text" onChange={getData}/>
+   <div>
+     
+ <textarea autoComplete='off' style={{fontSize:20}} rows="4" cols="50" onChange={getData}></textarea>
+
+{print? <h1>{data.toUpperCase()}</h1> :null}
+
+ <button style={{width:100, height:40}} onClick={()=>setPrint(true)} >Print Data</button>
    </div>
     
   );
